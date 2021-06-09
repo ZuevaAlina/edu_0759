@@ -3,6 +3,9 @@
  Если их сумма больше 10 - пусть функция вернет true, а если нет - false.
 
 */
+
+//проверка связи
+
 import java.util.Scanner;
 
 public class Main {

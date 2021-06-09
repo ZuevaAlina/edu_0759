@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8a1e3ee-e827-4cc6-889f-a59094eb234d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../task_1.3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task_1.3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../task_1.4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task_1.4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../task_1.4/out/production/task_1.4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task_1.4/out/production/task_1.4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../task_2.9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task_2.9/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/task_3.4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/task_3.4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/task_3.4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/task_3.4/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
