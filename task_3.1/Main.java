@@ -7,6 +7,7 @@
 •	Метод min должен возвращать минимальное значение из чисел a, b и с.
 */
 
+//проверка связи
 
 public class Main {
     public static int min(int a, int b, int c) {
