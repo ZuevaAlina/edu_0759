@@ -7,6 +7,7 @@
 Пример вывода:
 250000 */
 
+//прверка связи
 
 import java.util.Scanner;
 public class Main {
