@@ -11,15 +11,30 @@
 
 public class Main {
     public static void main(String[] args){
+    Animal ast1 = new Fox("red", "ted");
+        System.out.println(ast1.getColor());
     }
 }
 
 interface Animal {
-    Color getColor();
-}
+    String getColor();
+    }
+
     
-class Fox {
+class Fox implements Animal{
+    String color;
+    String name;
+
+    public Fox(String color, String name) {
+        this.color = color;
+        this.name = name;
+    }
+
     public String getName() {
         return "Fox";
     }
+    public String getColor() {
+        return "Red";
+    }
+
 }
