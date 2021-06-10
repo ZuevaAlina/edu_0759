@@ -8,6 +8,9 @@
 
 public class Main{
     public static void main(String[] args) {
-      //Ваш код
+     Horse horse = new Horse(true, "white", 4);
+     Pegasus peg = new Pegasus(true, "pink", 4);
+     horse.run();
+     peg.fly();
     }
 }
