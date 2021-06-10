@@ -8,6 +8,9 @@ TF = (9 / 5) * TC + 32
 на вход подается значение 41.
 Пример вывода:
 105.8 */
+
+//проверка связи
+
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.Scanner;
