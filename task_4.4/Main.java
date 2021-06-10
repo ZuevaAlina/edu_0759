@@ -19,9 +19,12 @@ Mouse jerryMouse = new Mouse("Jerry", 12 , 5),
 
 public class Main {
     public static void main(String[] args) {
-        Mouse jerryMouse = new Mouse("Jerry", 12, 5);
-
-        //напишите тут ваш код
+        Mouse jerryMouse = new Mouse("Jerry", 3, 1);
+        System.out.println(jerryMouse.name+","+jerryMouse.height+","+jerryMouse.tail);
+        Cat tomCat = new Cat("Tom",15,10);
+        System.out.println(tomCat.name+","+tomCat.height+","+tomCat.tail);
+        Dog spyikDog = new Dog("Spyik",25,15);
+        System.out.println(spyikDog.name+","+spyikDog.height+","+spyikDog.tail);
     }
 }
 class Mouse {
@@ -30,6 +33,28 @@ class Mouse {
     int tail;
 
     public Mouse(String name, int height, int tail) {
+        this.name = name;
+        this.height = height;
+        this.tail = tail;
+    }
+}
+class Cat {
+    String name;
+    int height;
+    int tail;
+
+    public Cat(String name, int height, int tail) {
+        this.name = name;
+        this.height = height;
+        this.tail = tail;
+    }
+}
+class Dog {
+    String name;
+    int height;
+    int tail;
+
+    public Dog(String name, int height, int tail) {
         this.name = name;
         this.height = height;
         this.tail = tail;
