@@ -16,8 +16,9 @@ public class Main {
         Person alex = new Person("Алексей","Иванов",37,olga,valera);
         Person eva  = new Person("Ева","Иванова",37,jula,oleg);
         Person gosha= new Person("Гоша","Иванов",10,eva,alex);
-        System.out.println("Мама Алексея: "+alex.getMother().getName());
-        System.out.println("Бабушка Гоши: "+gosha.getMother().getMother().getName());
+        /*System.out.println("Мама Алексея: "+alex.getMother().getName());
+        System.out.println("Бабушка Гоши: "+gosha.getMother().getMother().getName());*/
+        gosha.getInfo();
 
     }
 }
@@ -36,7 +37,23 @@ class Person{
         this.mother = mother;
         this.father = father;
     }
-    public String getName() {
+    public void getInfo(){
+        String info = "Меня зовут " +this.name+"\n";
+        if (this.mother!=null){
+            info += "Имя моей мамы: "+this.mother.name +"\n";
+        }
+        if (this.father!=null){
+            info += "Имя моего папы: "+this.father.name +"\n";
+        }
+        if ((this.father.mother!=null)&&(this.mother.mother!=null)){
+            info += "У меня две бабушки, бабушка "+this.father.mother.name +" и "+this.mother.mother.name+"\n";
+        }
+        if ((this.father.father!=null)&&(this.mother.father!=null)){
+            info += "У меня два деда, деда "+this.father.father.name +" и "+this.mother.father.name+"\n";
+        }
+        System.out.println(info);
+    }
+    /*public String getName() {
         return this.name;
     }
     public int getHp(){
@@ -48,5 +65,5 @@ class Person{
     public void setHp(int hp){
         if (this.hp+hp>100) this.hp = 100;
         else this.hp = this.hp + hp;
-    }
+    }*/
 }
