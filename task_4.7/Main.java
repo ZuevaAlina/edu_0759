@@ -11,30 +11,23 @@
 
 public class Main {
     public static void main(String[] args){
-    Animal ast1 = new Fox("red", "ted");
-        System.out.println(ast1.getColor());
+        Fox fox = new Fox();
+        System.out.println(fox.getColor());
     }
 }
 
 interface Animal {
-    String getColor();
-    }
+    public String getColor();
+}
 
-    
 class Fox implements Animal{
-    String color;
-    String name;
-
-    public Fox(String color, String name) {
-        this.color = color;
-        this.name = name;
-    }
-
     public String getName() {
         return "Fox";
     }
-    public String getColor() {
-        return "Red";
-    }
 
+    @Override
+    public String getColor() {
+        return "red";
+    }
 }
+
