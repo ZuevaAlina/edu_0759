@@ -11,7 +11,7 @@ import java.util.Scanner;
  *   + Показать комнаты с WiFi
  *   + Показать комнаты с WC
  *   + Показать комнаты с Eat
- *   Показать комнаты по кол-ву спальных мест
+ *   + Показать комнаты по кол-ву спальных мест
  *   Отобразить список команд
  * */
 public class Main {
@@ -31,7 +31,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String command;
         while (true){
-            System.out.println("Введите команду");
+            System.out.println("Введите команду: \n" +
+                    "getFreeRooms: \t Список своюодных комнат \n" +
+                    "vacateRoom: \t Освободить комнату \n" +
+                    "propertiesRoom: \t Характеристики комнаты \n" +
+                    "getWiFiRooms: \t Список комнат с WiFi \n" +
+                    "getWCRooms: \t Список комнат с WC \n" +
+                    "getEatRooms: \t Список комнат с Eat \n" +
+                    "getQRooms: \t Количество спальных мест");
             command = scanner.nextLine();
             if(command.equals("getFreeRooms")){
                 hotel.getFreeRooms();
@@ -57,6 +64,9 @@ public class Main {
             }else if(command.equals("getEatRooms")){
                 System.out.println("Комнаты с Eat: \n");
                 hotel.getEatRooms();
+            }else if(command.equals("getQRooms")){
+                System.out.println("Количество мест в комнатах: \n");
+                hotel.getQRooms();
 //окончание моего кода
             }else if (command.equals("exit")){
                 break;

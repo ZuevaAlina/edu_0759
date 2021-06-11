@@ -76,6 +76,15 @@ public class Hotel {
         }
         System.out.println(eatList);
     }
+    public void getQRooms() {
+        String qList = "";
+        for (int i = 0; i < rooms.length; i++) {
+            Room room = rooms[i];
+            qList += rooms[i].getRoomNumber() + " : \t " +rooms[i].getQuantity()+"\n";
+        }
+        System.out.println(qList);
+    }
+
     //-------окончание моего кода
 
         //бронирование комнаты
