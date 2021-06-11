@@ -3,6 +3,8 @@
 чтобы в сумме получилось больше 10-ти.
 */
 
+//проверка связи
+
 public class Main {
     public static void main(String[] args) {
         int nums[] = {3,8,6};
