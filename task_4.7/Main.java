@@ -13,6 +13,7 @@ public class Main {
     public static void main(String[] args){
         Fox fox = new Fox();
         System.out.println(fox.getColor());
+        System.out.println(fox.getName());
     }
 }
 
@@ -27,7 +28,7 @@ class Fox implements Animal{
 
     @Override
     public String getColor() {
-        return "red";
+        return "Red";
     }
 }
 
