@@ -12,6 +12,9 @@
 888888888
 8888888888
 */
+
+//проверка связи
+
 package com.javarush.task.task04.task0437;
 public class Main {
     public static void main(String[] args) {
