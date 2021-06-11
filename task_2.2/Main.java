@@ -4,6 +4,9 @@
 3 6 9 12 ...
 4 8 12 16 ...
 ... */
+
+//проверка связи
+
 public class Main {
     public static void main(String[] args) {
             for(int i = 1; i < 10; i++){
