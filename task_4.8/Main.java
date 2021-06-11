@@ -6,11 +6,11 @@ import java.util.Scanner;
  *  2) Номера (кол-во мест(1-3), сан.узел(есть/нет), питаение(есть/нет), wifi(есть/нет), свободен/занят)
  *
  *   *Задание для лабораторной работы №4*
- *   Освободить комнату
- *   Вывести свойства комнаты
- *   Показать комнаты с WiFi
- *   Показать комнаты с WC
- *   Показать комнаты с Eat
+ *   + Освободить комнату
+ *   + Вывести свойства комнаты
+ *   + Показать комнаты с WiFi
+ *   + Показать комнаты с WC
+ *   + Показать комнаты с Eat
  *   Показать комнаты по кол-ву спальных мест
  *   Отобразить список команд
  * */
@@ -48,6 +48,15 @@ public class Main {
                 System.out.print("Введите номер комнаты, для вывода свойств: ");
                 byte roomNumber = (byte) scanner.nextInt();
                 hotel.propertiesRoom(roomNumber);
+            }else if(command.equals("getWiFiRooms")){
+                System.out.println("Комнаты с WiFi: \n");
+                hotel.getWiFiRooms();
+            }else if(command.equals("getWCRooms")){
+                System.out.println("Комнаты с WC: \n");
+                hotel.getWCRooms();
+            }else if(command.equals("getEatRooms")){
+                System.out.println("Комнаты с Eat: \n");
+                hotel.getEatRooms();
 //окончание моего кода
             }else if (command.equals("exit")){
                 break;

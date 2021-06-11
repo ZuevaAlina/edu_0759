@@ -50,7 +50,32 @@ public class Hotel {
         }
         System.out.println(propertiesList);
     }
-
+    //показать комнаты с вайфаем
+    public void getWiFiRooms() {
+        String wifiList = "";
+        for (int i = 0; i < rooms.length; i++) {
+            Room room = rooms[i];
+            if (room.isWifi() == true) wifiList += rooms[i].getRoomNumber() + ", ";
+        }
+        System.out.println(wifiList);
+    }
+    //показать комнаты с WC
+    public void getWCRooms() {
+        String wcList = "";
+        for (int i = 0; i < rooms.length; i++) {
+            Room room = rooms[i];
+            if (room.isWc() == true) wcList += rooms[i].getRoomNumber() + ", ";
+        }
+        System.out.println(wcList);
+    }
+    public void getEatRooms() {
+        String eatList = "";
+        for (int i = 0; i < rooms.length; i++) {
+            Room room = rooms[i];
+            if (room.isEat() == true) eatList += rooms[i].getRoomNumber() + ", ";
+        }
+        System.out.println(eatList);
+    }
     //-------окончание моего кода
 
         //бронирование комнаты
