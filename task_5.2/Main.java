@@ -13,9 +13,7 @@
 Абрамовичи */
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /* 
 Модернизация ПО
@@ -24,23 +22,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        List<String> list = new ArrayList<>();
+        Map<String,String> house = new HashMap<String,String>();
         while (true) {
+            System.out.println("Введите город через Enter или Enter закончить ввод");
+            String town = scanner.nextLine();
+            System.out.println("Введите фамилию через Enter или Enter закончить ввод");
             String family = scanner.nextLine();
-            if (family.isEmpty()) {
+            if (town.isEmpty()) {
                 break;
             }
-
-            list.add(family);
+            house.put(town,family);
         }
-
-        // Read the house number
-        int houseNumber = scanner.nextInt();
-
-        if (0 <= houseNumber && houseNumber < list.size()) {
-            String familyName = list.get(houseNumber);
-            System.out.println(familyName);
-        }
+        System.out.println("Создана коллекция: \n" +house+"\n");
+        System.out.println("Введите город");
+        String enterTown = scanner.next();
+        System.out.println("В городе "+ enterTown+ " живут "+house.get(enterTown));
     }
 }
