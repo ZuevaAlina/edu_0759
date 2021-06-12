@@ -1,7 +1,7 @@
 /*
 * Дана коллекция имён.
-* 1) удалить все повторяющиеся имена из коллекции
-* 2) вывести коллекцию на экран
+* 1) + удалить все повторяющиеся имена из коллекции
+* 2) + вывести коллекцию на экран
 * */
 
 import java.util.ArrayList;
@@ -17,5 +17,14 @@ public class Main {
         names.add("Георгий");
         names.add("Павел");
         names.add("Руслан");
+        System.out.println(names);
+        for (int i = 0; i < names.size(); i++) {
+            for (int j = i+1; j < names.size(); j++) {
+                if (names.get(i) == names.get(j)){
+                    names.remove(j);
+                }
+            }
+        }
+        System.out.println(names);
     }
 }
