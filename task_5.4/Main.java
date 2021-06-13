@@ -19,10 +19,15 @@
 10
 */
 import java.io.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        try(FileInputStream fin=new FileInputStream("/Users/alinocka/Desktop/JAVA/test.txt")) {
+        System.out.println("Введите полный путь к файлу: \n" +
+                "Напрнимер  /Users/alinocka/Desktop/JAVA/test.txt");
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        try(FileInputStream fin=new FileInputStream(str)) {
             System.out.printf("File size: %d bytes \n", fin.available());
             int i=-1;
             while((i=fin.read())!=-1){
