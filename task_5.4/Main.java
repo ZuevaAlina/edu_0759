@@ -19,22 +19,35 @@
 10
 */
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Введите полный путь к файлу: \n" +
-                "Напрнимер  /Users/alinocka/Desktop/JAVA/test.txt");
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        try(FileInputStream fin=new FileInputStream(str)) {
-            System.out.printf("File size: %d bytes \n", fin.available());
-            int i=-1;
-            while((i=fin.read())!=-1){
-                System.out.print((char)i);
+        //ArrayList<Integer> nums = new ArrayList<>();
+        //System.out.println("Введите полный путь к файлу: \n" +
+        //        "Например  /Users/alinocka/Desktop/JAVA/test.txt");
+        //Scanner scanner = new Scanner(System.in);
+        //String str = scanner.nextLine();
+        try {
+            Scanner s = new Scanner(new File("/Users/alinocka/Desktop/JAVA/test.txt"));
+            ArrayList<Integer> nums = new ArrayList<Integer>();
+            while (s.hasNextInt()) {
+                nums.add(s.nextInt());
             }
-        }
-        catch(IOException ex){
+            for (int i = 0; i < nums.size(); i++) {
+                if (nums.get(i)%2!=0){
+                    nums.remove(i);
+                    i--;
+                }
+            }
+            Collections.sort(nums);
+            for (int i = 0; i < nums.size(); i++) {
+                System.out.println(nums.get(i));
+            }
+        }catch(IOException ex){
             System.out.println(ex.getMessage());
         }
     }
