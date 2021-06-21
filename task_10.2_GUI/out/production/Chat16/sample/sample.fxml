@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" style="-fx-bound-color: #F5A9F2;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="43.0" prefWidth="400.0">
+         <children>
+            <Label layoutX="85.0" layoutY="8.0" text="Мой сетевой чатик">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextArea editable="false" fx:id="textArea" prefHeight="350.0" prefWidth="400.0" />
+      <HBox prefHeight="15.0" prefWidth="200.0">
+         <children>
+            <TextField onAction="#send" fx:id="textField" prefWidth="300.0" promptText="Введите сообщение">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font></TextField>
+            <Button onAction="#send" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #F5A9F2; -fx-border-color: #000000; -fx-border-radius: 5;" text="Отправить">
+               <font>
+                  <Font name="Courier" size="13.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <Button onAction="#connect" text="Подключить" prefHeight="25.0" prefWidth="Infinity"/>
+   </children>
+</VBox>
