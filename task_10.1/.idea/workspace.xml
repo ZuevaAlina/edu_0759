@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50107eab-d395-4476-8df4-f375f9835cea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task_10.2_ChatServer/src/server/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task_10.2_ChatServer/src/server/User.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../task_3.4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task_3.4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../task_5.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task_5.2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../task_5.2/out/production/task_5.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task_5.2/out/production/task_5.2/.idea/workspace.xml" afterDir="false" />
@@ -30,6 +34,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
