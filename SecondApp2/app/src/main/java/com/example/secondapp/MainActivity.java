@@ -5,18 +5,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.database.CursorWrapper;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.example.secondapp.database.UserDbSchema;
-
 import java.util.ArrayList;
-import java.util.jar.Attributes;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
     //
     Button addUserBtn;
-
 
 
     @Override
@@ -103,12 +97,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Создаем ViewHolder
-    private class UserHolder extends RecyclerView.ViewHolder{
+    private class UserHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView itemTextView;
-
+        User user;
         // Создаем конструктор. Внутри принимаем 2 аргумента. 1-й Layout инфлятор, 2-й ViewGroup
 
-        public UserHolder(final LayoutInflater inflater, final ViewGroup viewGroup) {
+        public UserHolder(LayoutInflater inflater, ViewGroup viewGroup) {
+
             super(inflater.inflate(R.layout.single_item, viewGroup, false));
 
             /* Раньше мы делали так
@@ -116,29 +111,24 @@ public class MainActivity extends AppCompatActivity {
             * Но сейчас мы UserHolder наследуем от RecyclerView и берем метод itemView
             * itemView - текущий layout single_item*/
             itemTextView =itemView.findViewById(R.id.itemTextView);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    //User user = new User;
-                    Users users = new Users(MainActivity.this);
-                    userList = users.getUserList();
-
-                    Intent intent2 = new Intent(MainActivity.this,SingleActivity.class);
-                    //intent2.putExtra("name", user.getUserName());
-                    intent2.putExtra("name", userList(userName));
-                    startActivity(intent2);
-
-                }
-            });
+            itemView.setOnClickListener(this);
         }
 
         // Создадим метод bind, который займется связкой параметров в классе UserHolder
-          public void bind(String userString){
+          public void bind(String userString, User user){
 
               // В itemTextView печатаем текст userString
               itemTextView.setText(userString);
+              this.user = user;
           }
+
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, UserInfoActivity.class);
+            intent.putExtra("user", user);
+            startActivity(intent);
+
+        }
     }
 
 
@@ -182,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             String userString = user.getUserName()+"\n"+user.getUserLastName();
 
             // Вызываем метод bind у объекта userHolder чтобы отобразить это на экране
-            userHolder.bind(userString);
+            userHolder.bind(userString, user);
 
         }
 
